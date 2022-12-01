@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 
 //JPA
 @Entity//MemberDto 클래스를 엔티티로 선언
-@Table(name = "jpa_table")//엔티티와 매핑할 테이블 이름을 지정
+@Table(name = "jpa_table2")//엔티티와 매핑할 테이블 이름을 지정
 //lombok
 @Data
 @AllArgsConstructor
@@ -21,9 +21,9 @@ import lombok.NoArgsConstructor;
 public class MemberDto {
 	
 	@Id//매핑된 테이블의 기본키로 해당 속성을 설정
-	@Column(name = "id")//테이블의 필드와 매핑
+	@Column(name = "hakbun")//테이블의 필드와 매핑
 	@GeneratedValue(strategy = GenerationType.AUTO)//기본키 생성 전략
-	private String id;//아이디 기본키
+	private Long hakbun;//학번 기본키
 	
 	@Column(name = "name", nullable = false)//nullable->null값 허용 여부 
 	private String name;

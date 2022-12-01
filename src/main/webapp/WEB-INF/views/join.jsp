@@ -10,7 +10,7 @@
 	<h2>회원가입</h2>
 	<hr>
 	<form action="joinOk">
-		아이디 : <input type="text" name="id"><br><br>
+		
 		이름 : <input type="text" name="name"><br><br>
 		나이 : <input type="text" name="age"><br><br>
 		학년 : <input type="text" name="grade"><br><br>
