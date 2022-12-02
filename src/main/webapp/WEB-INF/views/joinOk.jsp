@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	안녕!
+	[회원 가입 정보]
+	<hr>
+	학번 : ${mDto.hakbun }<br>
+	이름 : ${mDto.name }<br>
+	나이 : ${mDto.age }<br>
+	학년 : ${mDto.grade }<br>
+	비고 : ${mDto.etc }
 </body>
 </html>

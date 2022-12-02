@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gyojincompany.home.dto.MemberDto;
@@ -23,7 +24,7 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/joinOk")
-	public String joinOk(HttpServletRequest request) {
+	public String joinOk(HttpServletRequest request, Model model) {
 		
 		
 		String name = request.getParameter("name");
@@ -41,6 +42,8 @@ public class HomeController {
 		MemberDto mDto  = memberRepository.save(memberDto);
 		
 		System.out.println(mDto.toString());		
+		
+		model.addAttribute("mDto", mDto);
 		
 		return "joinOk";
 	}

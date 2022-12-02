@@ -25,7 +25,7 @@ public class MemberDto {
 	@GeneratedValue(strategy = GenerationType.AUTO)//기본키 생성 전략
 	private Long hakbun;//학번 기본키
 	
-	@Column(name = "name", nullable = false)//nullable->null값 허용 여부 
+	@Column(name = "name", nullable = false, length = 20)//nullable->null값 허용 여부 
 	private String name;
 	
 	@Column(name = "age")
