@@ -8,7 +8,9 @@ import com.gyojincompany.home.dto.MemberDto;
 
 public interface MemberRepository extends JpaRepository<MemberDto, Long>{//<엔티티 클래스 타입, 기본키 타입>
 	
+	//데이터 조회(select)
 	public List<MemberDto> findByName(String memberName);
+	public List<MemberDto> findByHakbun(Long hakbun);
 	public List<MemberDto> findByNameOrderByHakbunDesc(String memberName);
 	public List<MemberDto> findAllByOrderByHakbunDesc();
 	public List<MemberDto> findByNameAndGrade(String memberName, int grade);
@@ -20,5 +22,9 @@ public interface MemberRepository extends JpaRepository<MemberDto, Long>{//<엔�
 	public List<MemberDto> findByNameStartingWith(String namekey);//특정단어로 시작
 	public List<MemberDto> findByNameEndingWith(String namekey);//특정단어로 끝남
 	public List<MemberDto> findByNameContaining(String namekey);//특정단어 포함
+	public List<MemberDto> findByNameLike(String namekey);//특정단어 포함
+	
+	//데이터 삭제(delete)
+	public void deleteAllByName(String name);//이름으로 조회하여 삭제
 	
 }
